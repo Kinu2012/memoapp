@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL.js メモアプリ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>メモアプリ</h1>
+    </header>
+    
+    <main>
+      <div id="container">
+        <div id="sidebar">
+          <div class="sidebar-header">
+            <h2>メモ一覧</h2>
+            <button id="newMemoButton">新規作成</button>
+          </div>
+          <ul id="memoList"></ul>
+        </div>
+        
+        <div id="memoDetail">
+          <div class="form-header">
+            <h2 id="formTitle">新規メモ</h2>
+            <div class="status-indicator" id="saveStatus"></div>
+          </div>
+          <form id="memoForm">
+            <input id="memoTitle" type="text" placeholder="件名" required />
+            <textarea id="memoContent" placeholder="内容を入力してください" required></textarea>
+            <div class="button-group">
+              <button type="button" id="saveButton">保存</button>
+              <button type="button" id="cancelButton">キャンセル</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>© 2025 SQL.js メモアプリ</p>
+    </footer>
+  </div>
+</body>
+</html>
